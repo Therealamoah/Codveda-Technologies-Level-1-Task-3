@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6274/6274902.png" type="image/png">
+    <style>
+        @keyframes rollUp {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-10px);}
+        }
+        .animate-rollUp {
+            animation: rollUp 1s infinite ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="relative font-sans flex flex-col justify-center items-center min-h-screen bg-no-repeat bg-cover bg-center" style="background-image: url('images/samson-ZGjbiukp_-A-unsplash.jpg');">
+    <div class=" p-8 rounded-lg shadow-md max-w-md mx-auto mt-10 bg-white/10 backdrop-blur-md border border-white/20">
+        <h2 class="text-1xl md:text-2xl lg:text-3xl font-semibold text-center">Counter App</h2>
+        <h1 id="count" class="text-5xl font-bold my-6 text-gray-900 text-center">0</h1>
+        <div class="flex gap-4">
+            <button id="decrement"class="flex-1 px-4 bg-red-600 text-white rounded hover:bg-red-500 ">
+                <span class="text-2xl inline-block animate-bounce">↓</span>Decrement
+            </button>
+            <button id="reset" class="flex-1 px-1 bg-yellow-400 text-white rounded hover:bg-yellow-500 flex flex-col items-center py-2">
+                <span class="text-2xl animate-bounce">↻</span>
+                <span class="text-sm">Reset</span>
+                </button>
+            <button id="increment" class="flex-1 px-4 bg-green-500 text-white rounded hover:bg-green-600 ">
+                <span class="text-2xl inline-block animate-bounce">↑</span>Increment
+            </button>
+            
+
+        </div>
+
+    </div>
+    <script>
+        const countDisplay = document.getElementById('count');
+        const decrementBtn = document.getElementById('decrement');
+        const incrementBtn = document.getElementById('increment');
+        const resetBtn = document.getElementById('reset');
+    
+        let count = 0;
+        function updateDisplay() {
+            countDisplay.textContent = count;
+        }
+        decrementBtn.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                updateDisplay();
+            }
+        });
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateDisplay();
+        });
+    </script>
+
+    
+</body>
+</html>
