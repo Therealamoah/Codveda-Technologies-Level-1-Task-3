@@ -1,13 +1,13 @@
-## Interactive Navbar and Form
+## Counter App
 
-A simple project that includes:
-- A responsive interactive navigation bar
-- A form with user input fields
+A simple interactive counter built with HTML Tailwind CSS and JavaScript.  
+The app lets users increase, decrease, or reset the counter. The counter never goes below zero.
 
 ## Features
-- Mobile-friendly navbar with toggle
-- Clean and responsive form design
-- Built using HTML, TailwindCSS, and JavaScript
+- Increase, decrease, and reset buttons
+- Prevents counter from going below zero
+- Responsive design using Tailwind CSS
+- Real-time updates with DOM manipulation
 
   ## Live Demo
 
